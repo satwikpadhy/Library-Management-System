@@ -504,7 +504,7 @@ void del_b()
  	fd.close();
  	remove("books.dat");
  	rename("temp.dat","books.dat");
- 	cout<<"\nBook Deleted";
+ 	cout<<"\nBook Deleted\n";
  	cout<<"Press Any Key to continue :";
   cin.get();
   cin.get();
