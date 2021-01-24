@@ -69,14 +69,14 @@ class student
  	public :
  		void create_s()
  		 {
- 		    system ("cls");
+ 		    system ("clear");
  		 	cout<<"Enter The admission number of the student :";
  		 	cin>>admno;
  		 	cout<<"Enter Student Name :";
  		 	cin.get();
  		 	fgets(sname, sizeof(sname), stdin);
  		 	token = 0;
- 		 	system ("cls");
+ 		 	system ("clear");
  		 	cout<<"New Record Created!";
  		 }
 
@@ -148,8 +148,10 @@ class student
 void startup()
  {
  	system("clear");
- 	cout<<"Kendriya Vidylaya No. 2 CRPF Campus, Bhubaneswar \n\nLibrary Management \n\n";
- 	cout<<"Press Any Key to continue :"; cin.get();;
+ 	cout<<"Library Management Software\n\n";
+  cout<<"Project by Satwik Padhy :\n\n";
+ 	cout<<"Press Any Key to continue :";
+  cin.get();
  	system("clear");
  }
 
@@ -201,9 +203,11 @@ void book_issue()
  	 }
  	if(t==0)
  	 	 cout<<"Student Not found.";
-    ;
     f.close();
     fd.close();
+    cout<<"Press Any Key to return to Main Menu :";
+    cin.get();
+    cin.get();
  }
 
 void book_deposit()
@@ -237,7 +241,9 @@ void book_deposit()
     if(t==0)
      cout<<"Student Not Found!";
     f.close();
-    cout<<"Press Any Key to continue :"; cin.get();;
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
  }
 
 
@@ -303,7 +309,9 @@ void disp_all_b()
 	  b.show_book();
     }
     f.close();
-    cout<<"Press Any Key to continue :"; cin.get();
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
  }
 
 
@@ -319,6 +327,9 @@ void disp_all_s()
 	  s.show_s();
     }
     f.close();
+    cout<<"Press any key to continue :";
+    cin.get();
+    cin.get();
  }
 
 
@@ -356,7 +367,9 @@ void disp_spec_b()
 	    cout<<"Sorry Book Not Found. Try Again.\n";
 
     f.close();
-    cout<<"Press Any Key to continue :"; cin.get();;
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
 }
 
 
@@ -386,7 +399,9 @@ void disp_spec_s()
 	    cout<<"Sorry Student Not Found. Try Again.\n";
 
     f.close();
-    cout<<"Press Any Key to continue :"; cin.get();;
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
 }
 
 
@@ -424,7 +439,9 @@ void modify_b()
 	    cout<<"Sorry Book Not Found. Try Again.\n";
 
 	f.close();
-    cout<<"Press Any Key to continue :"; cin.get();;
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
 
 }
 
@@ -455,8 +472,9 @@ void modify_s()
 	    cout<<"Sorry Student Not Found. Try Again.\n";
 
 	f.close();
-    cout<<"Press Any Key to continue :"; cin.get();;
-
+    cout<<"Press Any Key to continue :";
+    cin.get();
+    cin.get();
 }
 
 
@@ -487,7 +505,9 @@ void del_b()
  	remove("books.dat");
  	rename("temp.dat","books.dat");
  	cout<<"\nBook Deleted";
- 	cout<<"Press Any Key to continue :"; cin.get();;
+ 	cout<<"Press Any Key to continue :";
+  cin.get();
+  cin.get();
  }
 
 void del_s()
@@ -510,15 +530,10 @@ void del_s()
  	remove("students.dat");
  	rename("temp.dat","students.dat");
  	cout<<"\nStudent Record Deleted";
- 	cout<<"Press Any Key to continue :"; cin.get();;
+ 	cout<<"Press Any Key to continue :";
+  cin.get();
+  cin.get();
  }
-
-
-
-
-
-
-
 
 
 //####################################################################################################################################
@@ -529,7 +544,7 @@ void del_s()
 void admin_menu()
 {   int ch;
 	do {
-		system("clear");
+		  system("clear");
 	    cout<<"Administration Menu\n";
 	    cout<<"\n1.Create Student Record.";
 	    cout<<"\n2.Display all Student Record";
@@ -548,18 +563,18 @@ void admin_menu()
 	    switch (ch)
         {
           case 1: write_stu(); break;
-		  case 2: disp_all_s(); break;
-		  case 3: disp_spec_s(); break;
-		  case 4: modify_s(); break;
-		  case 5: del_s(); break;
-		  case 6: write_book(); break;
-		  case 7: disp_all_b(); break;
-		  case 8: disp_spec_b(); break;
-		  case 9: modify_b(); break;
-		  case 10: del_b(); break;
-		  case 11: break;
-	      default : cout<<"Wrong Choice"; break;
-		}
+		      case 2: disp_all_s(); break;
+		      case 3: disp_spec_s(); break;
+		      case 4: modify_s(); break;
+		      case 5: del_s(); break;
+		      case 6: write_book(); break;
+		      case 7: disp_all_b(); break;
+		      case 8: disp_spec_b(); break;
+		      case 9: modify_b(); break;
+		      case 10: del_b(); break;
+		      case 11: break;
+	        default : cout<<"Wrong Choice"; break;
+		     }
     }while(ch!=11);
 }
 
@@ -573,15 +588,16 @@ void admin_menu()
 
 int main()
  {
-    int ch;
- 	startup();
- 	do
- 	{   system("clear");
- 		cout<<" \t\t Main Menu \n";
+   int ch;
+   startup();
+   do
+   {
+    system("clear");
+ 		cout<<"\t\t Main Menu \n";
  		cout<<"1. Book Issue \n";
  		cout<<"2. Book Deposit \n";
  		cout<<"3. Administration Menu \n";
- 		cout<<"4. Exit \n Select option (1-4)";
+ 		cout<<"4. Exit \n Select option (1-4) :";
 
  		cin>>ch;
  		system("clear");
