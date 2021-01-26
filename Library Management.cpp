@@ -3,6 +3,7 @@
 #include<stdio.h>
 #include<fstream>
 #include<string.h>
+#include<ctype.h>
 using namespace std;
 
 class book
@@ -150,7 +151,7 @@ void startup()
  	system("clear");
  	cout<<"Library Management Software\n\n";
   cout<<"Project by Satwik Padhy :\n\n";
- 	cout<<"Press Any Key to continue :";
+ 	cout<<"Press Enter to Continue :";
   cin.get();
  	system("clear");
  }
@@ -205,7 +206,7 @@ void book_issue()
  	 	 cout<<"Student Not found.";
     f.close();
     fd.close();
-    cout<<"Press Any Key to return to Main Menu :";
+    cout<<"Press Enter to return to Main Menu :";
     cin.get();
     cin.get();
  }
@@ -213,7 +214,7 @@ void book_issue()
 void book_deposit()
  {  int adm,t=0;
  	system("clear");
- 	cout<<"Deposite Book."<<endl;
+ 	cout<<"Deposit Book."<<endl;
  	cout<<"Enter the Admission Number of the Student :";
     cin>>adm;
     f.open("students.dat",ios::in|ios::out);
@@ -241,7 +242,7 @@ void book_deposit()
     if(t==0)
      cout<<"Student Not Found!";
     f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
  }
@@ -309,7 +310,7 @@ void disp_all_b()
 	  b.show_book();
     }
     f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
  }
@@ -327,7 +328,7 @@ void disp_all_s()
 	  s.show_s();
     }
     f.close();
-    cout<<"Press any key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
  }
@@ -367,7 +368,7 @@ void disp_spec_b()
 	    cout<<"Sorry Book Not Found. Try Again.\n";
 
     f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
 }
@@ -399,7 +400,7 @@ void disp_spec_s()
 	    cout<<"Sorry Student Not Found. Try Again.\n";
 
     f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
 }
@@ -439,7 +440,7 @@ void modify_b()
 	    cout<<"Sorry Book Not Found. Try Again.\n";
 
 	f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"Press Enter to Continue :";
     cin.get();
     cin.get();
 
@@ -472,9 +473,9 @@ void modify_s()
 	    cout<<"Sorry Student Not Found. Try Again.\n";
 
 	f.close();
-    cout<<"Press Any Key to continue :";
+    cout<<"\nPress Enter to Continue :";
     cin.get();
-    cin.get();
+    //cin.get();
 }
 
 
@@ -505,7 +506,7 @@ void del_b()
  	remove("books.dat");
  	rename("temp.dat","books.dat");
  	cout<<"\nBook Deleted\n";
- 	cout<<"Press Any Key to continue :";
+ 	cout<<"Press Enter to Continue :";
   cin.get();
   cin.get();
  }
@@ -530,7 +531,7 @@ void del_s()
  	remove("students.dat");
  	rename("temp.dat","students.dat");
  	cout<<"\nStudent Record Deleted";
- 	cout<<"Press Any Key to continue :";
+ 	cout<<"Press Enter to Continue :";
   cin.get();
   cin.get();
  }
